@@ -17,6 +17,7 @@ type Settings struct {
 	StatsdPort                 int    `envconfig:"STATSD_PORT" default:"8125"`
 	RuntimePath                string `envconfig:"RUNTIME_ROOT" default:"/srv/runtime_data/current"`
 	RuntimeSubdirectory        string `envconfig:"RUNTIME_SUBDIRECTORY"`
+	RuntimeWatchRoot           bool   `envconfig:"RUNTIME_WATCH_ROOT" default:"true"`
 	RuntimeIgnoreDotFiles      bool   `envconfig:"RUNTIME_IGNOREDOTFILES" default:"false"`
 	LogLevel                   string `envconfig:"LOG_LEVEL" default:"WARN"`
 	RedisSocketType            string `envconfig:"REDIS_SOCKET_TYPE" default:"unix"`
