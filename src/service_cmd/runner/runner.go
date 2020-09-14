@@ -44,9 +44,7 @@ func Run() {
 			rand.New(redis.NewLockedSource(time.Now().Unix())),
 			s.ExpirationJitterMaxSeconds),
 		config.NewRateLimitConfigLoaderImpl(),
-		srv.Scope().Scope("service"),
-		s.RuntimeWatchRoot,
-	)
+		srv.Scope().Scope("service"))
 
 	srv.AddDebugHttpEndpoint(
 		"/rlconfig",
